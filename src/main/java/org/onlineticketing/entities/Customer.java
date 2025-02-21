@@ -10,7 +10,8 @@ public class Customer {
     private List<Ticket> bookedTickets=new ArrayList<>();
     private String password;
     private String hashedPassword;
-
+    Boolean isLoggedIn;
+public Customer(){}
     public Customer(String id, String name, String address, List<Ticket> bookedTickets, String password, String hashedPassword) {
         this.id = id;
         this.name = name;
@@ -46,6 +47,14 @@ public class Customer {
 
     public List<Ticket> getBookedTickets() {
         return bookedTickets;
+    }
+
+    public Boolean getLoggedIn() {
+        return isLoggedIn;
+    }
+
+    public void setLoggedIn(Boolean loggedIn) {
+        isLoggedIn = loggedIn;
     }
 
     public void setBookedTickets(List<Ticket> bookedTickets) {
