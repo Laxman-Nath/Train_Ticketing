@@ -9,15 +9,31 @@ public class Ticket {
     private Double perSeatPrice;
     private Double totalPrice;
     private Integer totalSeats;
-    private List<List<Integer>> seats=new ArrayList<>();
+    private List<Integer> seats=new ArrayList<>();
 
-    public Ticket(String id, Train train, Double perSeatPrice, Double totalPrice, Integer totalSeats, List<List<Integer>> seats) {
+    public Ticket(String id, Train train, Double perSeatPrice, Double totalPrice, Integer totalSeats, List<Integer> seats) {
         this.id = id;
         this.train = train;
         this.perSeatPrice = perSeatPrice;
         this.totalPrice = totalPrice;
         this.totalSeats = totalSeats;
         this.seats = seats;
+    }
+
+    public Ticket(){
+        super();
+    }
+
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "id='" + id + '\'' +
+                ", train=" + train +
+                ", perSeatPrice=" + perSeatPrice +
+                ", totalPrice=" + totalPrice +
+                ", totalSeats=" + totalSeats +
+                ", seats=" + seats +
+                '}';
     }
 
     public String getId() {
@@ -60,11 +76,11 @@ public class Ticket {
         this.totalSeats = totalSeats;
     }
 
-    public List<List<Integer>> getSeats() {
+    public List<Integer> getSeats() {
         return seats;
     }
 
-    public void setSeats(List<List<Integer>> seats) {
+    public void setSeats(List<Integer> seats) {
         this.seats = seats;
     }
 }

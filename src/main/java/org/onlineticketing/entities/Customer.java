@@ -12,7 +12,16 @@ public class Customer {
     private String hashedPassword;
     Boolean isLoggedIn;
 public Customer(){}
-    public Customer(String id, String name, String address, List<Ticket> bookedTickets, String password, String hashedPassword) {
+    public Customer(String id, String name, String address, String password, String hashedPassword) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+//        this.bookedTickets = bookedTickets;
+        this.password = password;
+        this.hashedPassword = hashedPassword;
+    }
+
+    public Customer(String id, String name, String address, String password,List<Ticket> bookedTickets, String hashedPassword) {
         this.id = id;
         this.name = name;
         this.address = address;

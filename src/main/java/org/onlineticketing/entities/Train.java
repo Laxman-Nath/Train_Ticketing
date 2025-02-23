@@ -1,13 +1,27 @@
 package org.onlineticketing.entities;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Train {
     private String id;
     private String trainName;
     private List<String> routes=new ArrayList<>();
-    private List<List<Boolean>> seats=new ArrayList<>();
+    private HashMap<Integer,Boolean> seats=new HashMap<>();
+    public Train(){
+        super();
+    }
+
+    @Override
+    public String toString() {
+        return "Train{" +
+                "id='" + id + '\'' +
+                ", trainName='" + trainName + '\'' +
+                ", routes=" + routes +
+                ", seats=" + seats +
+                '}';
+    }
 
     public String getId() {
         return id;
@@ -33,15 +47,15 @@ public class Train {
         this.routes = routes;
     }
 
-    public List<List<Boolean>> getSeats() {
+    public HashMap<Integer, Boolean> getSeats() {
         return seats;
     }
 
-    public void setSeats(List<List<Boolean>> seats) {
+    public void setSeats(HashMap<Integer,Boolean> seats) {
         this.seats = seats;
     }
 
-    public Train(String id, String trainName, List<String> routes, List<List<Boolean>> seats) {
+    public Train(String id, String trainName, List<String> routes, HashMap<Integer,Boolean> seats) {
         this.id = id;
         this.trainName = trainName;
         this.routes = routes;
